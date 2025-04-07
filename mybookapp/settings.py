@@ -57,7 +57,7 @@ if os.environ.get('DOCKER_ENV'):
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'myappdb',
+            'NAME': 'mysql',
             'USER': 'myappdbuser',
             'PASSWORD': 'myappdbpass',
             'HOST': 'localhost',
@@ -78,12 +78,12 @@ else:
     else:
         db_config.update({
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'myappdb',
+            'NAME': 'mysql',
             'USER': 'myappdbuser',
             'PASSWORD': 'myappdbpass',
             'HOST': 'localhost',
             'PORT': '3306',  # Default to TCP
-            'OPTIONS': {'unix_socket': '/var/run/mysqld/mysqld.sock'}  # Fallback
+              
         })
     DATABASES = {'default': db_config}
     logger.debug(f"Local DB config: {DATABASES['default']}")
