@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/../css/contact-us.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/../css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SocialIcons/1.0.1/soc.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/img/luffy_favicon-16x16.png">
+    <title>Contact Us</title>
+    <!-- Defining the Styles For the google map -->
+    <style>
+        .mapouter {
+            margin: 40px 0 0 100px;
+            position: relative;
+            text-align: right;
+            height: 400px;
+            width: 1171px;
+        }
+    </style><a href="https://www.embedgooglemap.net"></a>
+    <style>
+        .gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+            height: 400px;
+            width: 1071px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Header Section -->
+        <div class="logo">
+            <div class="logo-img"><a href="/">
+                    <img src="/img/logo.jpg" alt=""></a>
+                <p>Bank</p>
+            </div>
+            <div class="logo-contacts">
+                <p><i class="fa fa-envelope-o"></i> letBroomknow@gmail.com</p>
+            </div>
+        </div>
+        <nav class="nav-bar">
+            <div class="nav-items">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">GENRES</a>
+                        <div class="dropdown-content">
+                            <a href="/Manga List/">Fiction</a>
+                            <a href="/Manga List/">Non-Fiction</a>
+                            <a href="/Manga List/">Mystery</a>
+                            <a href="/Manga List/">Fantasy</a>
+                        </div>
+                    </li>
+                    <li><a href="/Manga List/">Top Picks</a></li>
+                    <li><a href="/LR/ List/">Latest Releases</a></li>
+                    <li><a href="/PB/ List/">Popular Books</a></li>
+                    <li><a href="/about-us/">About</a></li>
+                    <li><a href="/contact-us/">Contact Us</a></li>
+                </ul>
+            </div>
+            <button onclick="window.location.href='/user-signin/';">Sign In</button>
+            <button onclick="window.location.href='admin-signin/';">Admin SignIn</button>
+            <button onclick="window.location.href='/user-signup/';">Sign up</button>
+        </nav>
+        <!-- //Nav Bar -->
+    </header>
+    <!--//Header Section -->
+    <!-- Banner Section -->
+    <section class="banner"></section>/
+    <!-- //Banner Section -->
+
+    <!-- Contact Section -->
+    <div class="Contact-us">
+        <section class="Contact-us-map-container">
+            <h1>Contact Us</h1>
+            <div class="mapouter">
+                <div class="gmap_canvas"><iframe width="1171" height="400" id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=dublin07&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><br>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Us form  -->
+        <section class="Contact-us-form" id="Contact-us-form">
+            <div class="form-box">
+                <div class="form-value">
+                    <form method="post" name="COntact Us" id="login">
+                        <h2>Let Us Know</h2>
+                        <div class="inputbox">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <input type="text" id="name" name="name" required>
+                            <label for="">Name</label>
+                        </div>
+                        <div class="inputbox">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <input type="email" id="email" name="email" required>
+                            <label for="">Email</label>
+                        </div>
+                        <div class="inputbox">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                            <input type="text" name="tex" id="phone" required>
+                            <label for="">Contact Number</label>
+                        </div>
+                        <div class="inputbox">
+                            <textarea style="border: transparent;" rows="4" cols="40%" id="fname" name="fname"
+                                placeholder="Enter Message" required></textarea>
+                        </div>
+                        <input type="hidden" name="action" value="submit">
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Contact info section  -->
+            <div class="contact-us-info">
+                <h2>Contact Info</h4>
+                    <ul class="contact_info">
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Dublin 07,Ireland</li>
+                        <li><i class="fa fa-envelope-o">&nbsp;&nbsp;<a style="color: black;"
+                                    href="mailto:info@example.com">shindesumit311@gmail.com</a></i></li>
+                    </ul>
+            </div>
+        </section>
+    </div>
+    <!-- //Contact Section -->
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="social-container">
+                <img src="/img/icon-facebook.svg" alt="Facebook">
+                <img src="/img/icon-instagram.svg" alt="Instagram">
+                <img src="/img/icon-twitter.svg" alt="Twitter">
+                <img src="/img/icon-pinterest.svg" alt="Pinterest">
+            </div>
+            <div class="menu">
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+                <a href="#blog-section">Blog</a>
+            </div>
+            <div class="menu">
+                <a href="#">Careers</a>
+                <a href="#">Support</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <button onclick="window.location.href='/user-signin/';">Sign In</button>
+            <button onclick="window.location.href='/user-signup/';">Sign up</button>
+        </div>
+    </footer>
+</body>
+
+</html>

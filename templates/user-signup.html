@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/../css/user-signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/../css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SocialIcons/1.0.1/soc.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/img/luffy_favicon-16x16.png">
+    <title>User Sign Up</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-img"><a href="/">
+                <img src="/img/logo.jpg" alt="">
+            </a>
+                <p>Boorm</p>
+            </div>
+            <div class="logo-contacts">
+                <p><i class="fa fa-envelope-o"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e2ce87c796868b8b898f8a8b93a2858f838b8ec28f8381">[email&#160;protected]</a></p>
+            </div>
+        </div>
+        <nav class="nav-bar">
+            <div class="nav-items">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">GENRES</a>
+                        <div class="dropdown-content">
+                            <a href="/Manga List/">Fiction</a>
+                            <a href="/Manga List/">Non-Fiction</a>
+                            <a href="/Manga List/">Mystery</a>
+                            <a href="/Manga List/">Fantasy</a>
+                        </div>
+                    </li>
+                    <li><a href="/Manga List/">Top Picks</a></li>
+                    <li><a href="/LR/">Latest Releases</a></li>
+                    <li><a href="/PB/">Popular Books</a></li>
+                    <li><a href="/about-us/">About</a></li>
+                    <li><a href="/contact-us/">Contact Us</a></li>
+                </ul>
+            </div>
+            <button onclick="window.location.href='/user-signin/';">Sign In</button>
+            <button onclick="window.location.href='/user-signup/';">Sign up</button>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <div class="banner-box">
+            <div class="banner-box-container">
+                <h1>Create An Account</h1>
+            </div>
+            <div class="typewriter">
+                <h1>Please Create An Account By Filling The Form Below</h1>
+            </div>
+            <div class="form-box">
+                <form id="signUpForm" method="post">
+                    <table>
+                        <tr><td colspan="3"> </td></tr>
+                        <tr>
+                            <td>
+                                <div class="inputbox">
+                                    <ion-icon name="mail-outline"></ion-icon>
+                                    <input type="text" id="fname" name="fname" required>
+                                    <label for="fname">First Name</label>
+                                    <span id="fnameHint" class="hint"></span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="inputbox">
+                                    <ion-icon name="mail-outline"></ion-icon>
+                                    <input type="text" id="mname" name="mname" required>
+                                    <label for="mname">Middle Name</label>
+                                    <span id="mnameHint" class="hint"></span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="inputbox">
+                                    <ion-icon name="mail-outline"></ion-icon>
+                                    <input type="text" id="lname" name="lname" required>
+                                    <label for="lname">Last Name</label>
+                                    <span id="lnameHint" class="hint"></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr><td colspan="3"> </td></tr>
+                        <tr>
+                            <td>
+                                <select id="select" name="selectaccnt" required>
+                                    <option value="">Select Account Type</option>
+                                    <option value="Manga">Manga</option>
+                                    <option value="Manuwha">Manuwha</option>
+                                </select>
+                                <span id="selectHint" class="hint"></span>
+                            </td>
+                            <td>
+                                <div class="inputbox">
+                                    <ion-icon name="mail-outline"></ion-icon>
+                                    <input type="email" id="email" name="email" required>
+                                    <label for="email">Email</label>
+                                    <span id="emailHint" class="hint"></span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="inputbox">
+                                    <ion-icon name="phone-portrait-outline"></ion-icon>
+                                    <input type="tel" id="phone" name="phone" required>
+                                    <label for="phone">Phone</label>
+                                    <span id="phoneHint" class="hint"></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="inputbox">
+                                    <ion-icon name="location-outline"></ion-icon>
+                                    <input type="text" name="address" id="address" required>
+                                    <label for="address">Address</label>
+                                    <span id="addressHint" class="hint"></span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="inputbox">
+                                    <ion-icon name="lock-closed-outline"></ion-icon>
+                                    <input type="password" name="password" id="password" required>
+                                    <label for="password">Password</label>
+                                    <span id="passwordHint" class="hint"></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Born:</label>
+                                <input type="date" id="dob" name="dob" required>
+                                <span id="dobHint" class="hint"></span>
+                            </td>
+                            <td>
+                                <label>Gender:</label>
+                                <input type="radio" id="male" name="gender" value="male" required>
+                                <label for="male">Male</label>
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label for="female">Female</label>
+                                <span id="genderHint" class="hint"></span>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr><td colspan="3"> </td></tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <form method="post">
+                                    {% csrf_token %}
+                                    {{ user_form.as_p }}
+                                    {{ profile_form.as_p }}
+                                    <button type="submit">Create Account</button>
+                                <input type="hidden" name="action" value="register">
+                                </form>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <div class="register">
+                        <p>Already have an account <a href="/user-signin/">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <h2>Registered Users</h2>
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody"></tbody>
+        </table>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="social-container">
+                <img src="/img/icon-facebook.svg" alt="Facebook">
+                <img src="/img/icon-instagram.svg" alt="Instagram">
+                <img src="/img/icon-twitter.svg" alt="Twitter">
+                <img src="/img/icon-pinterest.svg" alt="Pinterest">
+            </div>
+            <div class="menu">
+                <a href="/about-us/">About</a>
+                <a href="/contact-us/">Contact Us</a>
+                <a href="#blog-section">Blog</a>
+            </div>
+            <div class="menu">
+                <a href="#">Careers</a>
+                <a href="#">Support</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <button onclick="window.location.href='/user-signin/';">Sign In</button>
+            <button onclick="window.location.href='/user-signup/';">Sign up</button>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="/./js/user-signup.js"></script>
+</body>
+</html>

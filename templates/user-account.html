@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/../css/user-signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/../css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SocialIcons/1.0.1/soc.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/img/luffy_favicon-16x16.png">
+    <title>User Account</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-img"><a href="/">
+                <img src="/img/logo.jpg" alt="">
+            </a>
+                <p>Boorm</p>
+            </div>
+            <div class="logo-contacts">
+                <p><i class="fa fa-envelope-o"></i> <a href="mailto:letBroomknow@gmail.com">letBroomknow@gmail.com</a></p>
+            </div>
+        </div>
+        <nav class="nav-bar" id="navBar">
+            <div class="nav-items">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">GENRES</a>
+                        <div class="dropdown-content">
+                            <a href="/Manga List/">Fiction</a>
+                            <a href="/Manga List/">Non-Fiction</a>
+                            <a href="/Manga List/">Mystery</a>
+                            <a href="/Manga List/">Fantasy</a>
+                        </div>
+                    </li>
+                    <li><a href="/Manga List/">Top Picks</a></li>
+                    <li><a href="/LR/">Latest Releases</a></li>
+                    <li><a href="/PB/">Popular Books</a></li>
+                    <li><a href="/about-us/">About</a></li>
+                    <li><a href="/contact-us/">Contact Us</a></li>
+                </ul>
+            </div>
+            <button id="accountBtn">Account</button>
+            <button id="logoutBtn">Logout</button>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <div class="banner-box">
+            <div class="banner-box-container">
+                <h1>Welcome Back, <span id="userFirstName"></span>!</h1>
+            </div>
+            <div class="account-info">
+                <h2>Your Account Details</h2>
+                <table class="user-details">
+                    <tr><td><strong>First Name:</strong></td><td id="fname"></td></tr>
+                    <tr><td><strong>Middle Name:</strong></td><td id="mname"></td></tr>
+                    <tr><td><strong>Last Name:</strong></td><td id="lname"></td></tr>
+                    <tr><td><strong>Account Type:</strong></td><td id="accountType"></td></tr>
+                    <tr><td><strong>Email:</strong></td><td id="email"></td></tr>
+                    <tr><td><strong>Phone:</strong></td><td id="phone"></td></tr>
+                    <tr><td><strong>Address:</strong></td><td id="address"></td></tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="social-container">
+                <img src="/img/icon-facebook.svg" alt="Facebook">
+                <img src="/img/icon-instagram.svg" alt="Instagram">
+                <img src="/img/icon-twitter.svg" alt="Twitter">
+                <img src="/img/icon-pinterest.svg" alt="Pinterest">
+            </div>
+            <div class="menu">
+                <a href="/about-us/">About</a>
+                <a href="/contact-us/">Contact Us</a>
+                <a href="#blog-section">Blog</a>
+            </div>
+            <div class="menu">
+                <a href="#">Careers</a>
+                <a href="#">Support</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <button id="footerLogoutBtn">Logout</button>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="/./js/user-account.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/../css/user-signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/../css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SocialIcons/1.0.1/soc.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/img/luffy_favicon-16x16.png">
+    <title>Admin Home</title>
+    <style>
+        .container { margin: 20px auto; max-width: 1200px; text-align: center; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-img"><a href="/">
+                <img src="/img/logo.jpg" alt="">
+            </a>
+                <p>Boorm</p>
+            </div>
+            <div class="logo-contacts">
+                <p><i class="fa fa-envelope-o"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="137f766753637e7e7c7a7f7e6653747e727a7f3d707c7e">[email&#160;protected]</a></p>
+            </div>
+        </div>
+        <nav class="nav-bar">
+            <div class="nav-items">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">GENRES</a>
+                        <div class="dropdown-content">
+                            <a href="/Manga List/">Fiction</a>
+                            <a href="/Manga List/">Non-Fiction</a>
+                            <a href="/Manga List/">Mystery</a>
+                            <a href="/Manga List/">Fantasy</a>
+                        </div>
+                    </li>
+                    <li><a href="/Manga List/">Top Picks</a></li>
+                    <li><a href="/LR/">Latest Releases</a></li>
+                    <li><a href="/PB/">Popular Books</a></li>
+                    <li><a href="/about-us/">About</a></li>
+                    <li><a href="/contact-us/">Contact Us</a></li>
+                </ul>
+            </div>
+            <button onclick="window.location.href='/user-signin/';">Sign In</button>
+            <button onclick="window.location.href='/user-signup/';">Sign Up</button>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <div class="banner-box">
+            <div class="banner-box-container">
+                <h1>Admin Dashboard</h1>
+            </div>
+            <div class="typewriter">
+                <h1>Manage Registered Users</h1>
+            </div>
+            <div class="container">
+                <h2>All Registered Users</h2>
+                <table id="adminUserTable">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Middle Name</th>
+                            <th>Last Name</th>
+                            <th>Account Type</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Address</th>
+                            <th>Password</th>
+                        </tr>
+                    </thead>
+                    <tbody id="adminUserTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="social-container">
+                <img src="/img/icon-facebook.svg" alt="Facebook">
+                <img src="/img/icon-instagram.svg" alt="Instagram">
+                <img src="/img/icon-twitter.svg" alt="Twitter">
+                <img src="/img/icon-pinterest.svg" alt="Pinterest">
+            </div>
+            <div class="menu">
+                <a href="/about-us/">About</a>
+                <a href="/contact-us/">Contact Us</a>
+                <a href="#blog-section">Blog</a>
+            </div>
+            <div class="menu">
+                <a href="#">Careers</a>
+                <a href="#">Support</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <button onclick="window.location.href='/user-signin/';">Sign In</button>
+            <button onclick="window.location.href='/user-signup/';">Sign Up</button>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="/./js/user-signup.js"></script>
+</body>
+</html>

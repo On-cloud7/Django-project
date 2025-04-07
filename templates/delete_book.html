@@ -1,0 +1,6 @@
+<form method="post">
+    {% csrf_token %}
+    <p>Delete "{{ book.title }}"?</p>
+    <button type="submit">Yes, Delete</button>
+    <a href="/manga-list/">Cancel</a>
+</form>

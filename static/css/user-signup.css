@@ -1,0 +1,514 @@
+/* Setting initial margin and padding to zero  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Applying universal font as poppins */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Upper Navigation Bar  */
+.logo {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Setting display tpye of logo img */
+.logo-img {
+    display: flex;
+}
+
+/* Stating dimensions for logo */
+.logo img {
+    height: 40px;
+    width: 90px;
+}
+
+.logo-img>p {
+    font-weight: bolder;
+    font-size: 29px;
+    font-style: italic;
+}
+
+.logo-contacts {
+    display: inline-block;
+    display: flex;
+    margin-left: 40px;
+}
+
+.logo-contacts p {
+    margin-left: 20px;
+}
+
+/* Lower Navigation Bar  */
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: linear-gradient(95deg,
+            hsl(206.3, 46.5%, 69.22%),
+            hsl(225.82, 22.45%, 48.04%),
+            hsl(229.2, 26.04%, 37.65%),
+            hsl(206.3, 46.5%, 69.22%));
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+/* Styling nav bar login Button  */
+.nav-bar>button {
+    padding: 12px 28px;
+    border: 2px solid black;
+    outline-width: 0;
+    color: white;
+    border-radius: 22px;
+    cursor: pointer;
+    font-weight: 500;
+    background-image: linear-gradient(120deg,
+            hsl(206.3, 46.5%, 69.22%),
+            hsl(225.82, 22.45%, 48.04%));
+}
+
+.nav-bar button:hover {
+    background: linear-gradient(105deg,
+            hsl(225.82, 22.45%, 48.04%),
+            hsl(206.3, 46.5%, 69.22%));
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+/* Dropdown content in Navigation design  */
+li a,
+.dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a {
+    font-size: 18px;
+    box-sizing: border-box;
+    font-style: normal;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+    background-color: #142340;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fcfeff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    color: black;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #142340;
+    color: whitesmoke;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Banner Section  */
+.banner {
+    display: flex;
+    background: url('../img/back-6.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/* Banner Box Styling */
+.banner-box {
+    padding: 1em;
+    background: rgb(51, 50, 50, 0.5);
+    height: 95%;
+    width: 80%;
+}
+
+/* Displaying a container box above banner box using flex property*/
+.banner-box-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.banner-box-container h1 {
+    font-weight: 700;
+    font-size: 50px;
+    text-decoration: underline;
+    color: #f6c086;
+}
+
+.banner-box p {
+    width: 43%;
+    color: white;
+    font-size: 1.2em;
+}
+
+.banner-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.banner-text-container h2 {
+    font-weight: 200;
+    margin-bottom: 20px;
+    color: white;
+    line-height: 1.1;
+}
+
+/* Animation to text */
+.typewriter {
+    margin-bottom: 20px;
+}
+
+/* Animating the heading  */
+.typewriter h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid white;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    font-size: 20px;
+    font-style: italic;
+    text-decoration: underline;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .05em;
+    /* Adjust as needed */
+    color: whitesmoke;
+    animation:
+        typing1 7s steps(40, end),
+        blink-caret 2.5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing1 {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent
+    }
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Styling the Form  */
+.form-box {
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    width: 1000px;
+    height: 525px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+}
+
+h2 {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+
+.inputbox {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin: 30px 10px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+}
+
+/* Adding style to input label to translate vertical when clicked */
+.inputbox label {
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -10px;
+}
+
+/* Adding Style to the input box element  */
+.inputbox input {
+    width: 300px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 15px;
+    color: #fff;
+}
+
+.inputbox ion-icon {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
+}
+
+.forget {
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.forget label input {
+    margin-right: 3px;
+}
+
+.forget label a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.forget label a:hover {
+    text-decoration: underline;
+}
+
+.form-value {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.form-box button {
+    width: 50%;
+    height: 40px;
+    border-radius: 40px;
+    background: #f6c086;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 900;
+    margin-left: 70px;
+}
+
+.form-box button:hover {
+    background-color: #142340;
+    color: white;
+}
+
+.register {
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register p a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.register p a:hover {
+    text-decoration: underline;
+}
+
+/* footer  */
+.footer {
+    border-top: 10px solid black;
+    background: linear-gradient(109deg,
+            hsl(206.3, 46.5%, 69.22%),
+            hsl(225.82, 22.45%, 48.04%),
+            hsl(229.2, 26.04%, 37.65%),
+            hsl(206.3, 46.5%, 69.22%));
+    height: 30vh;
+    border-bottom: 10px solid black;
+}
+
+.footer-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 2rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.social-container {
+    margin-top: 3rem;
+}
+
+.social-container img {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.footer-container button {
+    margin-top: 3rem;
+    padding: 12px 28px;
+    border: 2px solid black;
+    outline-width: 0;
+    color: white;
+    border-radius: 22px;
+    cursor: pointer;
+    font-weight: 500;
+    background-image: linear-gradient(120deg,
+            hsl(206.3, 46.5%, 69.22%),
+            hsl(225.82, 22.45%, 48.04%));
+}
+
+/* Table styling for user responses */
+.container {
+    background-color: hsl(220, 16%, 96%);
+    padding: 20px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+#userTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#userTable th, #userTable td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+#userTable th {
+    background-color: hsl(206.3, 46.5%, 69.22%);
+    color: white;
+}
+
+#userTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#userTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Add to the end of user-signup.css */
+.account-info {
+    margin: 20px auto;
+    width: 80%;
+    color: #fff;
+    text-align: center;
+}
+
+.user-details {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.user-details th, .user-details td {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 12px;
+    text-align: left;
+}
+
+.user-details th {
+    background-color: rgba(246, 192, 134, 0.5);
+    color: #fff;
+}
+
+.user-details td {
+    color: #fff;
+}
+
+.user-details tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.user-details tr:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+/* Add or adjust in user-signup.css if overlap occurs */
+.banner {
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 2; /* Ensure table is above banner */
+}

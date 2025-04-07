@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/../css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/../css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SocialIcons/1.0.1/soc.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+        <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="/img/luffy_favicon-16x16.png">
+    <!-- Title -->
+    <title>Home Page</title>
+</head>
+
+<body>
+    <!-- Header Section  -->
+    <header>
+        
+        <div class="logo">
+            <div class="logo-img"><a href="/">
+                    <img src="/img/logo.jpg" alt=""></a>
+                <p>Boorm</p>
+            </div>
+            <div class="logo-contacts">
+                <p><i class="fa fa-envelope-o"></i> letBroomknow@gmail.com</p>
+            </div>
+        </div>
+        <!-- Nav Bar -->
+        <nav class="nav-bar">
+            <div class="nav-items">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">GENRES</a>
+                        <div class="dropdown-content">
+                            <a href="/Manga List/">Fiction</a>
+                            <a href="/Manga List/">Non-Fiction</a>
+                            <a href="/Manga List/">Mystery</a>
+                            <a href="/Manga List/">Fantasy</a>
+                        </div>
+                    </li>
+                    <li><a href="/Manga List/">Top Picks</a></li>
+                    <li><a href="/LR/">Latest Releases</a></li>
+                    <li><a href="/PB/">Popular Books</a></li>
+                    <li><a href="/about-us/">About</a></li>
+                    <li><a href="/contact-us/">Contact Us</a></li>
+                </ul>
+            </div>
+            <button onclick="window.location.href='/user-signin/';">Sign In</button>
+            <button onclick="window.location.href='/user-signup/';">Sign up</button>
+        </nav>
+        <!-- //Nav Bar -->
+    </header>
+    <!-- Banner Section -->
+    <section class="banner">
+        <!-- Banner Box Container  -->
+        <div class="banner-box">
+            <h2>Books</h2>
+            <ul>
+                {% for book in books %}
+                <li>{{ book.title }} by {{ book.author.name }} 
+                (<a href="/update-book/{{ book.pk }}/">Edit</a> | 
+                <a href="/delete-book/{{ book.pk }}/">Delete</a>)</li>
+                {% endfor %}
+            </ul>
+            <a href="/create-book/">Add New Book</a>
+            <a href="/create-review/">Add Review</a>
+            <div class="banner-box-container">
+                <div class="typewriter">
+                    <h1>Want to Boorm
+                    <!-- Add the GIF here -->
+                    <div class="banner-gif">
+                    <img src="/img/wormgo.gif" alt="Wormgo GIF">
+                    </div>
+                    </h1>
+                </div>
+                <hr><br>
+                <div class="banner-text-container">
+                    <h4> Let’s enter a new world with words, where imagination shapes reality.</h4>
+                </div>
+            </div>
+            </div>
+            <div class="book-slider">
+                <div class="slide-track">
+                    <div class="slide"><img src="./img/b1.webp" alt="Book 1"></div>
+                    <div class="slide"><img src="./img/b2.webp" alt="Book 2"></div>
+                    <div class="slide"><img src="./img/b3.webp" alt="Book 3"></div>
+                    <div class="slide"><img src="./img/b4.webp" alt="Book 4"></div>
+                    <div class="slide"><img src="./img/b5.webp" alt="Book 5"></div>
+                    <!-- Duplicate slides for seamless looping -->
+                    <div class="slide"><img src="./img/b1.webp" alt="Book 1"></div>
+                    <div class="slide"><img src="./img/b2.webp" alt="Book 2"></div>
+                    <div class="slide"><img src="./img/b3.webp" alt="Book 3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //Banner Section -->
+    <header>
+        <h1 class="blog-section-h1">Top Books Collection</h1>
+    </header>
+    <h1 class="blog-section-h1">Top in Action</h1>
+        <section class="blog-section">
+            <button id="prevBtn" class="scroll-btn">&#10094;</button>
+            <div class="article-slider-container">
+                <div class="article-slider">
+                    <div class="article">
+                        <img src="/img/all.webp" alt="Article 1">
+                        <div class="overlay">
+                            <p>By John Doe</p>
+                            <h4>Top 10 Must-Read Books of 2023</h4>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <img src="/img/solo.webp" alt="Article 2">
+                        <div class="overlay">
+                            <p>By MAPA</p>
+                            <h4>NEXT session of SOLO IS LIT</h4>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <img src="/img/fantasy.webp" alt="Article 3">
+                        <div class="overlay">
+                            <p>By JIN WHOE</p>
+                            <h4>Exploring the World of Fantasy</h4>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <img src="/img/mony.webp" alt="Article 4">
+                        <div class="overlay">
+                            <p>By Michael Green</p>
+                            <h4>New release and Budget</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="nextBtn" class="scroll-btn">&#10095;</button>
+        </section>
+        <h1 class="blog-section-h1">Top in Adventure</h1>
+        <section class="blog-section">
+            <button id="prevBtn" class="scroll-btn">&#10094;</button>
+            <div class="article-slider-container">
+                <div class="article-slider">
+                    <div class="article">
+                        <img src="/img/all.webp" alt="Article 1">
+                        <div class="overlay">
+                            <p>By John Doe</p>
+                            <h4>Top 10 Must-Read Books of 2023</h4>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <img src="/img/solo.webp" alt="Article 2">
+                        <div class="overlay">
+                            <p>By MAPA</p>
+                            <h4>NEXT session of SOLO IS LIT</h4>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <img src="/img/fantasy.webp" alt="Article 3">
+                        <div class="overlay">
+                            <p>By JIN WHOE</p>
+                            <h4>Exploring the World of Fantasy</h4>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <img src="/img/mony.webp" alt="Article 4">
+                        <div class="overlay">
+                            <p>By Michael Green</p>
+                            <h4>New release and Budget</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="nextBtn" class="scroll-btn">&#10095;</button>
+        </section>
+        <h1 class="blog-section-h1">Top in Fantasy</h1>
+        <section class="blog-section">
+            <button id="prevBtn" class="scroll-btn">&#10094;</button>
+            <div class="article-slider-container">
+                <div class="article-slider">
+                    <div class="article">
+                        <img src="/img/all.webp" alt="Article 1">
+                        <div class="overlay">
+                            <p>By John Doe</p>
+                            <h4>Top 10 Must-Read Books of 2023</h4>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <img src="/img/solo.webp" alt="Article 2">
+                        <div class="overlay">
+                            <p>By MAPA</p>
+                            <h4>NEXT session of SOLO IS LIT</h4>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <img src="/img/fantasy.webp" alt="Article 3">
+                        <div class="overlay">
+                            <p>By JIN WHOE</p>
+                            <h4>Exploring the World of Fantasy</h4>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <img src="/img/mony.webp" alt="Article 4">
+                        <div class="overlay">
+                            <p>By Michael Green</p>
+                            <h4>New release and Budget</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="nextBtn" class="scroll-btn">&#10095;</button>
+        </section>    
+    <footer>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="social-container">
+                    <img src="/img/icon-facebook.svg" alt="Facebook">
+                    <img src="/img/icon-instagram.svg" alt="Instagram">
+                    <img src="/img/icon-twitter.svg" alt="Twitter">
+                    <img src="/img/icon-pinterest.svg" alt="Pinterest">
+                </div>
+                <div class="menu">
+                    <a href="/about-us/">About</a>
+                    <a href="/contact-us/">Contact Us</a>
+                    <a href="#blog-section">Blog</a>
+                </div>
+                <div class="menu">
+                    <a href="#">Careers</a>
+                    <a href="#">Support</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <button onclick="window.location.href='/user-signin/';">Sign In</button>
+                <button onclick="window.location.href='/user-signup/';">Sign up</button>
+            </nav>
+        </footer>
+
+</body>
+</html>

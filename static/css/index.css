@@ -1,0 +1,743 @@
+/* Settinhg the initial margin and padding to 0 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Setting the universal font AS poppins */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Designing the logo section  using flex property*/
+.logo {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-img {
+    display: flex;
+}
+
+.logo img {
+    height: 40px;
+    width: 90px;
+}
+
+.logo-img>p {
+    font-weight: 700;
+    font-size: 29px;
+    font-style: italic;
+}
+
+.logo-contacts {
+    display: inline-block;
+    display: flex;
+    margin-left: 40px;
+}
+
+.logo-contacts p {
+    margin-left: 20px;
+}
+
+
+
+/* Lower Navigation design */
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: linear-gradient(95deg,
+            hsl(206.3, 46.5%, 69.22%),
+            hsl(225.82, 22.45%, 48.04%),
+            hsl(229.2, 26.04%, 37.65%),
+            hsl(206.3, 46.5%, 69.22%));
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.nav-bar>button {
+    padding: 12px 28px;
+    border: 2px solid black;
+    outline-width: 0;
+    color: white;
+    border-radius: 22px;
+    cursor: pointer;
+    font-weight: 500;
+    background-image: linear-gradient(120deg,
+            hsl(206.3, 46.5%, 69.22%),
+            hsl(225.82, 22.45%, 48.04%));
+}
+
+.nav-bar button:hover {
+    background: linear-gradient(105deg,
+
+            hsl(225.82, 22.45%, 48.04%),
+            hsl(206.3, 46.5%, 69.22%));
+}
+
+
+
+/* Designing the contents of the navigation bar using float property */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a,
+.dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a {
+    font-size: 18px;
+    box-sizing: border-box;
+    font-style: normal;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+    background-color: #142340;
+}
+
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fcfeff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    color: black;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #142340;
+    color: whitesmoke;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* BAckground design of the index page. */
+.banner {
+    display: flex;
+    background: url('../img/back-62.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/* Overlaying a box over background */
+.banner-box {
+    padding: 4em;
+    background: rgba(0, 0, 0, 0.72);
+    height: 80%;
+    width: 80%;
+}
+
+.banner-box p {
+    color: white;
+    font-size: 1.2em;
+}
+
+.banner-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.banner-text-container h2 {
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: white;
+    line-height: 1.1;
+}
+
+/* Animation */
+.typewriter {
+    margin-bottom: 20px;
+}
+
+.typewriter h1 {
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+    /* border-right: .15em solid white; */
+    white-space: nowrap;
+    margin: 0 50px;
+    font-size: 50px;
+    /* font-style: italic; */
+    /* text-decoration: underline; */
+    letter-spacing: .05em;
+    color: #FFFBF1;
+    animation: typing1 7s steps(40, end), blink-caret 2.5s step-end infinite;
+}
+
+.banner-text-container h4 {
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-size: 30px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* The typing effect */
+@keyframes typing1 {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: transparent;
+    }
+}
+
+hr {
+    width: 100%;
+    /* outline-style: auto; */
+    border: 1px solid aqua;
+}
+
+.banner-text-list {
+    margin-top: 10%;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+.l1 {
+    margin-left: 2%;
+    border-right: 1px solid white;
+    height: 200px;
+}
+
+.l1 h4 {
+    font-size: 20px;
+    font-weight: 500;
+    color: wheat;
+    text-align: center;
+}
+
+.l1 p {
+
+    font-size: 14px;
+    text-align: justify;
+    padding: 10px 15px;
+}
+
+/* Section 2 design */
+
+.container {
+    background-color: hsl(220, 16%, 96%);
+}
+
+.why-us {
+    padding-top: 10vh;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10vh;
+}
+
+.why-us>h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: hsl(233, 26%, 24%);
+}
+
+.why-us>p {
+    font-size: 18px;
+    color: #2a325e;
+    margin-bottom: 15px;
+    font-style: italic;
+    font-weight: 600;
+    text-align: justify;
+}
+
+.feature-section {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    padding-bottom: 10vh;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.feature-item {
+    width: 23%;
+}
+
+.feature-item>img {
+    width: 65px;
+    margin-bottom: 5px;
+}
+
+.feature-item>h1 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: hsl(233, 26%, 24%);
+
+}
+
+.feature-item>p {
+    font-size: 18px;
+    color: #2a325e;
+    margin-bottom: 15px;
+    font-style: italic;
+    font-weight: 600;
+    /* text-align:justify; */
+}
+
+.blog-section {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 10vh;
+}
+
+.blog-section-h1 {
+    padding-left: 150px;
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: hsl(233, 26%, 24%);
+}
+
+.article-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.article>img {
+    width: 250px;
+    height: 250px;
+}
+
+.article {
+    margin: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.content>p {
+    color: hsl(233, 8%, 62%);
+    font-weight: 400;
+    font-size: 14px;
+    text-align: justify;
+}
+
+/* footer section  */
+.footer {
+    border-top: 10px solid black;
+    border-bottom: 10px solid black;
+    background: linear-gradient(109deg,
+            hsl(206.3, 46.5%, 69.22%),
+            hsl(225.82, 22.45%, 48.04%),
+            hsl(229.2, 26.04%, 37.65%),
+            hsl(206.3, 46.5%, 69.22%));
+    height: 30vh;
+}
+
+.footer-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 2rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.social-container {
+    margin-top: 3rem;
+}
+
+.social-container img {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.footer-container button {
+    margin-top: 3rem;
+    padding: 12px 28px;
+    border: 2px solid black;
+    outline-width: 0;
+    color: white;
+    border-radius: 22px;
+    cursor: pointer;
+    font-weight: 500;
+    background-image: linear-gradient(120deg,
+            hsl(206.3, 46.5%, 69.22%),
+            hsl(225.82, 22.45%, 48.04%));
+}
+
+
+.book-slider {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    position: relative;
+    background: #f5f5f5;
+    padding: 20px 0;
+    z-index: 100;
+}
+
+.slide-track {
+    display: flex;
+    animation: scroll 15s linear infinite;
+    width: calc(150px * 9); /* Adjust based on number of books */
+}
+
+.slide {
+    width: 150px;
+    margin: 10px;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Moves left continuously */
+}
+.read-more {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+.blog-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    margin: auto;
+}
+
+.article-slider {
+    display: flex;
+    gap: 0px; /* Removes extra space between articles */
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    padding: 0;
+}
+
+.article {
+    position: relative;
+    flex: 0 0 auto;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+.scroll-btn {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+.scroll-btn:hover {
+    background: black;
+}
+
+/* Center the Search Bar */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(232, 140, 140);
+    padding: 5px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 6px rgba(3, 164, 233, 0.1);
+}
+
+#search-input {
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    outline: none;
+    width: 420px;
+    border-radius: 20px 0 0 20px;
+}
+
+#search-btn {
+    background: #6ec0e7;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+}
+
+#search-btn:hover {
+    background: #e65c00;
+}
+
+/* Responsive design for header */
+/* For the menu button */
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Menu button */
+#menu-toggle {
+    position: fixed;
+    top: 50px;
+    left: 15px;
+    background-color:#71edf8; /* Dark background */
+    overflow-y: auto;
+    transition: all 0.3s ease-in-out;
+    z-index: 1002; /* Ensure it's above other elements */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Sidebar menu */
+#side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hidden */
+    width: 250px;
+    height: 100vh;
+    background: #222;
+    color: white;
+    transition: left 0.3s ease-in-out; /* Slide effect */
+    z-index: 1003; /* Higher than book slider's z-index */
+    overflow-y: auto; /* For scrollable content if menu is longer than viewport */
+    padding-top: 60px;
+}
+
+#side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#side-menu ul li {
+    padding: 15px;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+#side-menu ul li:hover {
+    background: #444;
+}
+
+#side-menu ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+#side-menu.active {
+    left: 0; /* Slide in when active */
+}
+
+.hidden {
+    left: -250px; /* Useing this instead of visibility if want to slide it out */
+}
+
+/* Styling for buttons */
+#side-menu button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#side-menu button:hover {
+    background-color: #45a049;
+}
+
+/* Enhanced sidebar styling */
+#side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hidden by default */
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(135deg, #2c3e50, #3498db); /* Gradient */
+    transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Slide and fade */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    z-index: 1003; /* Above book slider */
+    padding-top: 60px;
+    opacity: 0; /* Start transparent */
+    border-radius: 0 10px 10px 0; /* Rounded right edge */
+}
+
+#side-menu.active {
+    left: 0; /* Slide in */
+    opacity: 1; /* Fully visible */
+}
+
+#side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Change to block for vertical stacking */
+    flex-direction: column; /* Stack items vertically */
+}
+
+#side-menu li {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle divider */
+    float: none; /* Override float: left from global li */
+    width: 100%; /* Ensure full width */
+}
+
+#side-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.2s;
+    display: block; /* Ensure links take full width */
+}
+
+#side-menu a:hover {
+    color: #f1c40f; /* Yellow hover effect */
+}
+#side-menu button {
+    margin: 10px 20px;
+    padding: 8px 16px;
+    background: #e74c3c; /* Red for visibility */
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    width: calc(100% - 40px); /* Full width minus margins */
+}
+#menuBtn {
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+}

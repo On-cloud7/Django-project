@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manga List</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .error { color: red; display: none; }
+    </style>
+</head>
+<body>
+    <h2>Books</h2>
+    <div id="book-list"></div>
+    <div id="book-error" class="error"></div>
+
+    <h2>Add Review</h2>
+    <form id="review-form">
+        <select id="book-id" name="book_id">
+            <option value="">Select a Book</option>
+            {% for book in books %}
+                <option value="{{ book.pk }}">{{ book.title }}</option>
+            {% endfor %}
+        </select><br>
+        <input type="number" id="rating" name="rating" min="1" max="5" placeholder="Rating (1-5)"><br>
+        <textarea id="comment" name="comment" placeholder="Comment (optional)"></textarea><br>
+        <button type="submit">Submit Review</button>
+    </form>
+    <div id="review-error" class="error"></div>
+
+    <script>
+        // AJAX GET: Fetch books on page load
+        $(document).ready(function() {
+            $.ajax({
+                url: '/get-books/',
+                method: 'GET',
+                success: function(data) {
+                    let html = '<ul>';
+                    data.books.forEach(function(book) {
+                        html += `<li>${book.fields.title} by ${book.fields.author} (${book.fields.genre})</li>`;
+                    });
+                    html += '</ul>';
+                    $('#book-list').html(html);
+                },
+                error: function(xhr) {
+                    $('#book-error').text('Failed to load books: ' + (xhr.responseJSON?.error || 'Unknown error')).show();
+                }
+            });
+        });
+
+        // AJAX POST: Submit review
+        $('#review-form').submit(function(e) {
+            e.preventDefault();
+            
+            // Client-side validation
+            let bookId = $('#book-id').val();
+            let rating = $('#rating').val();
+            if (!bookId || !rating) {
+                $('#review-error').text('Please select a book and enter a rating').show();
+                return;
+            }
+            if (rating < 1 || rating > 5) {
+                $('#review-error').text('Rating must be between 1 and 5').show();
+                return;
+            }
+
+            $.ajax({
+                url: '/add-review/',
+                method: 'POST',
+                data: JSON.stringify({
+                    book_id: bookId,
+                    rating: rating,
+                    comment: $('#comment').val()
+                }),
+                contentType: 'application/json',
+                headers: {'X-CSRFToken': '{{ csrf_token }}'},
+                success: function(data) {
+                    $('#review-error').hide();
+                    // Trigger GET to refresh book list (or update directly)
+                    $.get('/get-books/', function(data) {
+                        let html = '<ul>';
+                        data.books.forEach(function(book) {
+                            html += `<li>${book.fields.title} by ${book.fields.author}</li>`;
+                        });
+                        html += '</ul>';
+                        $('#book-list').html(html);
+                    });
+                    $('#review-form')[0].reset();
+                },
+                error: function(xhr) {
+                    $('#review-error').text('Error: ' + (xhr.responseJSON?.error || 'Unknown error')).show();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
